@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GetText</title>
+
+</head>
+<body>
+<script type="text/javascript">
+    /* パラメータを渡す側 */
+    function send() {
+        var name="";
+        var sex="";
+        var favorite="";
+        /* 名前(コード変換) */
+        if (document.form1.name.value!=""){
+            name=escape(document.form1.name.value);
+        }
+        /* 性別 */
+        if(document.form1.sex[0].checked){
+            sex=escape(document.form1.sex[0].value);
+        }else if(document.form1.sex[1].checked){
+            sex=escape(document.form1.sex[1].value);
+        }
+        /* 興味 */
+        for(i=1;i<=4;i++){
+            if(document.form1.elements["favorite"+i].checked){
+                favorite+=document.form1.elements["favorite"+i].value+" ";
+            }
+        }
+        favorite=escape(favorite);
+        /* 取得した値をパラメータにセット(アンパサンド'&'で連結) */
+        var pram="name="+name+"&sex="+sex+"&favorite="+favorite;
+        /* アドレスにパラメータを付加 */
+        location.href="/module/include/js/location4/test2.html?"+pram;
+        return false;
+    }
+</script>
+
+<!-- ★送信フォーム [start] -->
+<form action="#" method="get" name="form1" onsubmit="return send();">
+    <fieldset>
+        <legend>パラメータに渡す値を入力</legend>
+        <p>
+            名前：<input type="text" name="name" value="" size="20" />
+        </p>
+        <p>
+            性別：
+            <input type="radio" name="sex" value="男">男
+            <input type="radio" name="sex" value="女">女
+        </p>
+        <p>
+            趣味：
+            <input type="checkbox" name="favorite1" value="スポーツ" />スポーツ　
+            <input type="checkbox" name="favorite2" value="映画鑑賞" />映画鑑賞　
+            <input type="checkbox" name="favorite3" value="音楽鑑賞" />音楽鑑賞　
+            <input type="checkbox" name="favorite4" value="仕事！" />仕事！
+        </p>
+        <p>
+            <input type="submit" value="送信" />
+        </p>
+    </fieldset>
+</form>
+<!-- ★送信フォーム [end] // -->
+</body>
+</html>
