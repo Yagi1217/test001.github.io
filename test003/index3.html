@@ -27,7 +27,7 @@ function getJsonp_GAS() {
 			var len = json.length;
 			var html = '';
 			for(var i=0; i < len; i++){
-				html += json[i].id + ' ' + json[i].name + '<br>';
+				html += json[i].title + ' ' + json[i].review + '<br>';
 			}
 			document.getElementById('whole').innerHTML = html;
 		}
