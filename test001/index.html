@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PostText</title>
+<script type="text/javascript">
+<!--
+
+    function postForm(value) {
+     
+        var form = document.createElement('form');
+        var request = document.createElement('input');
+     
+        form.method = 'POST';
+        form.action = 'https://httpbin.org/post';
+     
+        request.type = 'hidden'; //入力フォームが表示されないように
+        request.name = 'text';
+        request.value = value;
+     
+        form.appendChild(request);
+        document.body.appendChild(form);
+     
+        form.submit();
+     
+    }
+// -->
+</script>
+
+</head>
+<body>
+postForm('hello world')
+
+</body>
+</html>
