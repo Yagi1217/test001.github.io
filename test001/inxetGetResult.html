@@ -19,6 +19,7 @@ if(queryString){
     var paramValue = decodeURIComponent(element[1]);
 
     queryObject[paramName] = paramValue;
+    document.getElementById("dat").innerHTML = "<span style='color: red;'>" + paramName + "</span>";
   }
 }
      
@@ -31,6 +32,7 @@ if(queryString){
 </head>
 <body>
 
-
+<p id="dat" style="font-size: 120%;">TEST</p>
+  
 </body>
 </html>
