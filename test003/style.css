@@ -6,7 +6,7 @@
 
 #app {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 16px 48px;
 }
 
@@ -24,19 +24,3 @@ h1 {
 
 .book {
   display: flex;
-  justify-content: space-between;
-  font-weight: 300;
-  padding: 8px;
-  margin-bottom: 24px;
-}
-.book:hover {
-  background: #f2f2f2;
-}
-.book:hover i.star {
-  color: #FECA42;
-}
-.book .title {
-  font-size: 24px;
-  line-hetght: 48px;
-  margin-bottom: 24px;
-}
