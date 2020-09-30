@@ -19,5 +19,6 @@ new Vue({
 
       },
     );
+    alert( this.books )
   }
 })
