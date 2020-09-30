@@ -21,4 +21,5 @@ new Vue({
     );
     alert( this.books )
   }
+  alert( "test" )
 })
