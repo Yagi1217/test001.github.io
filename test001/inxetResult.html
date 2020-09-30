@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PostText</title>
+<script type="text/javascript">
+<!--
+
+request.onreadystatechange = function() {
+  if (request.readyState == 4 && request.status == 200) {
+    //受信完了時の処理
+    var result = document.getElementByName("text");
+    var text = document.createTextNode(decodeURI(request.responseText));
+    result.appendChild(text);
+  }
+}
+     
+    }
+    
+
+    // -->
+</script>
+
+</head>
+<body>
+
+
+</body>
+</html>
