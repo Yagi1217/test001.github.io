@@ -1,32 +1,30 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
   <head>
-  <link rel="stylesheet" href="css/SCSS.css">
-  <script type="text/javascript" src="./index.js"></script>
+    <link rel="stylesheet" href="css/SCSS.css">
+    <script type="text/javascript" src="./index.js"></script>
   </head>
   <body>
     <p>ここにHTMLの文章などが入ります</p>
 
-<script src="https://unpkg.com/vue"></script>
-
-<div id="app">
-  <h1>{{ message }}</h1>
-  <div class="books">
-
-    <div class="book" v-for="book in books">
-      <div class="info">
-        <div class="title"><i class="book icon"></i> {{book.title}}</div>
-        <div class="review">{{book.review}}</div>
-      </div>
-      <div class="rate">
-        <div class="ui statistics">
-          <div class="statistic">
-            <div class="value"><i class="star icon"></i> {{book.rate}} </div>
+    <script src="https://unpkg.com/vue"></script>
+    <div id="app">
+      <h1>{{ message }}</h1>
+      <div class="books">
+        <div class="book" v-for="book in books">
+          <div class="info">
+            <div class="title"><i class="book icon"></i> {{book.title}}</div>
+            <div class="review">{{book.review}}</div>
+          </div>
+          <div class="rate">
+            <div class="ui statistics">
+              <div class="statistic">
+                <div class="value"><i class="star icon"></i> {{book.rate}} </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-  </div>
-</div>
   </body>
 </html>
