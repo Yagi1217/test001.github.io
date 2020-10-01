@@ -1,0 +1,36 @@
+  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <title>PHP & JavaScript Room: test2.html</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            /* パラメータを受取る側 */
+            function pramWrite() {
+                $.getJSON("https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec", null, function(data,status){
+                    //取得成功したら実行する処理
+                    var html = '';
+                    for (var i in data){
+                        console.log("ファイルの取得に成功しました");
+                        console.log(data[i].title);
+                        console.log(data[i].review);
+                        html += data[i].title + ' ' + data[i].review + '<br>';
+                    }
+                    document.getElementById('whole').innerHTML = html;
+                    
+                });
+            }
+        </script>
+    </head>
+    <body onload="pramWrite()">
+        <form name="form1" action="#">
+            <fieldset>
+                <legend>受け取ったパラメータを表示</legend>
+                <textarea cols="40" rows="4" name="pram" style="border:0;overflow:visible" readonly="readonly"></textarea>
+            </fieldset>
+        </form>
+        <div id="whole">
+    </body>
+</html>
