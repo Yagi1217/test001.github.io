@@ -26,6 +26,10 @@
 				}
 				document.getElementById('whole').innerHTML = html;
 			}
+			error:function() {
+			//取得失敗時に実行する処理
+				console.log("何らかの理由で失敗しました");
+			}
 		});
 	}
 	</script>
