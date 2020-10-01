@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Googleスプレッドシートの内容をjsonデータとして利用する</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// ページ読み込み後の処理
+//	window.onload = function(){
+//		// 【main-script】 を実行
+//		getJsonp_GAS();
+//	}
+	
+	// 【main-script】 スプレッドシート内の記述をjsonデータとして読み込み html 内へ入れ込む
+	function getJsonpGAS() {
+		$.ajax({
+			type: 'GET',
+			url: 'https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec',
+			dataType: 'jsonp',
+			jsonpCallback: 'jsondata',
+			success: function(json){
+				var len = json.length;
+				var html = '';
+				for(var i=0; i < len; i++){
+					html += json[i].title + ' ' + json[i].review + '<br>';
+				}
+				document.getElementById('whole').innerHTML = html;
+			}
+			error: function() {
+			//取得失敗時に実行する処理
+				console.log("何らかの理由で失敗しました");
+			}
+		});
+	}
+	</script>
+
+	</head>
+<body onload="getJsonpGAS()">
+<!--<body> -->
+<div id="whole">
+<!-- // -->
+</div>
+</body>
+</html>
