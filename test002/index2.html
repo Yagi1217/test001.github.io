@@ -10,12 +10,14 @@
             function pramWrite() {
                 $.getJSON("https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec", null, function(data,status){
                     //取得成功したら実行する処理
+                    var html = '';
                     for (var i in data){
                         console.log("ファイルの取得に成功しました");
                         console.log(data[i].title);
                         console.log(data[i].review);
-                        document.getElementById('whole').innerHTML = html;
+                        html += data[i].title + ' ' + data[i].review + '<br>';
                     }
+                    document.getElementById('whole').innerHTML = html;
                     
                 });
             }
