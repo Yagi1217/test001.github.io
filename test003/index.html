@@ -27,5 +27,22 @@
         </div>
       </div>
     </div>
+    <div id="app">
+      <vue-simple-suggest 
+        v-model="selected" 
+        :list="suggestionList" 
+        :filter-by-query="true">
+      </vue-simple-suggest>
+    </div>
+    
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          selected: null,
+          suggestionList: ['Canada', 'China', 'Cameroon', "Italy", "Iraq", "Iceland"]
+        }
+      })
+    </script>
   </body>
 </html>
