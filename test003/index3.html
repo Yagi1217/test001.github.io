@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Googleスプレッドシートの内容をjsonデータとして利用する</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 	// ページ読み込み後の処理
 	window.onload = function(){
@@ -25,8 +25,6 @@
 					html += json[i].title + ' ' + json[i].review + '<br>';
 				}
 				document.getElementById('whole').innerHTML = html;
-				alert( html );
-			window.confirm(html);
 			}
 		});
 	}
