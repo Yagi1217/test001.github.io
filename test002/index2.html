@@ -14,6 +14,7 @@
                         console.log("ファイルの取得に成功しました");
                         console.log(data[i].title);
                         console.log(data[i].review);
+                        document.getElementById('whole').innerHTML = html;
                     }
                     
                 });
@@ -25,6 +26,7 @@
             <fieldset>
                 <legend>受け取ったパラメータを表示</legend>
                 <textarea cols="40" rows="4" name="pram" style="border:0;overflow:visible" readonly="readonly"></textarea>
+                <div id="whole">
             </fieldset>
         </form>
     </body>
