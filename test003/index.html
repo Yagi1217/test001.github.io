@@ -37,6 +37,9 @@
         :filter-by-query="true">
       </vue-simple-suggest>
       <h1>{{ message }}</h1>
+      <li v-for="item in items" :key="item.message">
+        {{ item.message }}
+      </li>
     </div>
     
     <script>
@@ -46,6 +49,10 @@
           selected: null,
           suggestionList: ['Canada', 'China', 'Cameroon', "Italy", "Iraq", "Iceland"],
           message: 'Book List'
+          items: [
+            { message: 'Foo' },
+            { message: 'Bar' }
+          ]
         }
       })
     </script>
