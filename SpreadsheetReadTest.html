@@ -17,7 +17,7 @@
             console.log("ファイルの取得に成功しました");
             //console.log(data[i].title);
             //console.log(data[i].review);
-            html += '<div class="title"><i class="book icon"></i>' + data[i].title + '<div> <div class="review">' + data[i].review + '<div><br>';
+            html += '<div class="title"><i class="book icon"></i>' + data[i].title + '</div> <div class="review">' + data[i].review + '</div><br>';
           }
           document.getElementById('whole').innerHTML = html;
         });
