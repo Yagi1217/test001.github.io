@@ -36,6 +36,7 @@
         :list="suggestionList" 
         :filter-by-query="true">
       </vue-simple-suggest>
+      <h1>{{ message }}</h1>
     </div>
     
     <script>
@@ -43,7 +44,8 @@
         el: '#app2',
         data: {
           selected: null,
-          suggestionList: ['Canada', 'China', 'Cameroon', "Italy", "Iraq", "Iceland"]
+          suggestionList: ['Canada', 'China', 'Cameroon', "Italy", "Iraq", "Iceland"],
+          message: 'Book List'
         }
       })
     </script>
