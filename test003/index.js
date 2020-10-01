@@ -1,9 +1,11 @@
 new Vue({
   el: '#app',
-  data () {
+  data: {
+//  data () {
+    message: 'Book List'
     return {
       message: 'Book List',
-      books: null,
+      books: null
     }
   },
   mounted () {
