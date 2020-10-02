@@ -17,24 +17,6 @@
     <p>ここにHTMLの文章などが入ります</p>
 
     <div id="app">
-      <h1>{{ message }}</h1>
-      <div class="books">
-        <div class="book" v-for="book in books">
-          <div class="info">
-            <div class="title"><i class="book icon"></i> {{book.title}}</div>
-            <div class="review">{{book.review}}</div>
-          </div>
-          <div class="rate">
-            <div class="ui statistics">
-              <div class="statistic">
-                <div class="value"><i class="star icon"></i> {{book.rate}} </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="app2">
       <vue-simple-suggest 
         v-model="selected" 
         :list="suggestionList" 
@@ -64,8 +46,8 @@
     </div>
     
     <script>
-      const app2 = new Vue({
-        el: '#app2',
+      const app = new Vue({
+        el: '#app',
         data: {
           selected: null,
           suggestionList: ['Canada', 'China', 'Cameroon', "Italy", "Iraq", "Iceland"],
