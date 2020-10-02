@@ -24,7 +24,7 @@
       </vue-simple-suggest>
       <h1>{{ message }}</h1>
     <ol>
-        <li v-for="book in vtuber">
+        <li v-for="book in books">
           <div class="info">
             <div class="title"><i class="book icon"></i> {{book.title}}</div>
             <div class="review">{{book.review}}</div>
@@ -70,7 +70,7 @@
             })
             .then(json => {
                 //多分、右側の.jsonにメソッドを指定する事でjsonの細かな区分けから呼び出すことも可能みたい
-                this.vtuber = json;
+                this.books = json;
             })
         }
 //    axios.get('https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec').then(response => (this.books = response))
