@@ -43,7 +43,6 @@
       <h1>{{ message }}</h1>
     <ol>
         <li v-for="person in vtuber">{{ person.name }}</li>
-        <li v-for="person in vtuber">{{ person.title }}</li>
     </ol>
       <li v-for="item in items" :key="item.message">
         {{ item.message }}
@@ -70,8 +69,8 @@
         },
         
         mounted() {
-//          fetch('./sample.json')
-          fetch('https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec')
+          fetch('./sample.json')
+//          fetch('https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec')
             .then(response => {
               return response.json();
             })
