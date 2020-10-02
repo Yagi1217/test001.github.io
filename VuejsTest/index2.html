@@ -23,7 +23,13 @@
         :filter-by-query="true">
       </vue-simple-suggest>
       <h1>{{ message }}</h1>
-    <ol>
+      
+      <!-- Foo Barのテスト -->
+      <li v-for="item in items" :key="item.message">
+        {{ item.message }}
+      </li>
+      
+      <ol>
         <li v-for="book in books">
           <div class="info">
             <div class="title"><i class="book icon"></i> {{book.title}}</div>
@@ -38,11 +44,9 @@
           </div>
       </li>
     </ol>
-      <li v-for="item in items" :key="item.message">
-        {{ item.message }}
-      </li>
+    <!-- booksの中身を一括で取ってみる -->
+    <div class="book" v-for="book in books">{{ book.title }}</div>
 
-        <div class="book" v-for="book in books">{{ book.title }}</div>
     </div>
     
     <script>
