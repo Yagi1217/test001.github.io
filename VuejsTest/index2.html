@@ -42,7 +42,19 @@
       </vue-simple-suggest>
       <h1>{{ message }}</h1>
     <ol>
-        <li v-for="person in vtuber">{{ person.title }}</li>
+        <li v-for="book in vtuber">
+          <div class="info">
+            <div class="title"><i class="book icon"></i> {{book.title}}</div>
+            <div class="review">{{book.review}}</div>
+          </div>
+          <div class="rate">
+            <div class="ui statistics">
+              <div class="statistic">
+                <div class="value"><i class="star icon"></i> {{book.rate}} </div>
+              </div>
+            </div>
+          </div>
+      </li>
     </ol>
       <li v-for="item in items" :key="item.message">
         {{ item.message }}
