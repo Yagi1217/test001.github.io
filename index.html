@@ -2,32 +2,28 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <title>index.html</title>
-  </head>
-   <script type="text/javascript">
-function test() {
-
-	var ProjectList = [
-'IframeTest',
-'SpreadsheetReadTest',
-'VuejsTest'
-];
-var URL = '';
-
-ProjectList.forEach(name => URL += '<li><a href="' + name + '/index.html">' + name + '</a></li>');
-document.getElementById('target').innerHTML = URL;
-}
-</script>
-
-
-  <body onload="test();">
-<h1>index</h1>
-<hr>
-
-<ul>
-<p id="target">test</p>
-
-</ul>
-
-  </body>
+	  <title>index.html</title>
+	</head>
+	<script type="text/javascript">
+		function ProjectLink() {
+			var URL = '';
+			var ProjectList = [
+				'IframeTest',
+				'SpreadsheetReadTest',
+				'VuejsTest'
+			];
+			
+			ProjectList.forEach(name => URL += '<li><a href="' + name + '/index.html">' + name + '</a></li>');
+			document.getElementById('target').innerHTML = URL;
+		}
+	</script>
+	
+	<body onload="ProjectLink;">
+		<h1>index</h1>
+		<hr>
+		
+		<ul>
+			<p id="target">test</p>
+		</ul>
+	</body>
 </html>
