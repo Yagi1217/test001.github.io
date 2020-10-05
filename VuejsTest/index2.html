@@ -74,8 +74,8 @@
             })
             .then(json => {
                 //多分、右側の.jsonにメソッドを指定する事でjsonの細かな区分けから呼び出すことも可能みたい
-                this.books = json;
-//                this.books = json.BookList;
+//                this.books = json;
+                this.books = json.BookList;
             })
         }
 //    axios.get('https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec').then(response => (this.books = response))
