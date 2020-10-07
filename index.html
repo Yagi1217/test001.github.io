@@ -16,7 +16,7 @@
 		    <div id="app">
 		<ul>
 			<div class="ProjectList" v-for="ProjectList in ProjectLists">
-				{{ ProjectList.Name }}
+				<li><a href="{{ ProjectList.Name }}/index.html">{{ ProjectList.Name }}</a></li>
 			</div>
 		</ul>
 			</div>
@@ -28,13 +28,11 @@
         },
         
         mounted() {
-//          fetch('https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec')
           fetch('https://script.google.com/macros/s/AKfycbyCQtKgtTJVg5fvr_KJ8PVvj_wevQ6zI2txw59yrqsvpdZXmCk/exec')
             .then(response => {
               return response.json();
             })
             .then(json => {
-                //多分、右側の.jsonにメソッドを指定する事でjsonの細かな区分けから呼び出すことも可能みたい
                 this.ProjectLists = json.ProjectList;
             })
         }
