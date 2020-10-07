@@ -16,7 +16,7 @@
 		    <div id="app">
 		<ul>
 			<div class="ProjectList" v-for="ProjectList in ProjectLists">
-				<li><a href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+				<li><a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
 			</div>
 		</ul>
 			</div>
