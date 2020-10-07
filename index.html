@@ -3,6 +3,11 @@
   <head>
 	  <meta charset="UTF-8">
 	  <title>index.html</title>
+		
+    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-simple-suggest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vue-simple-suggest/dist/styles.css">
+		<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
 	</head>
 	
 	<body>
@@ -32,7 +37,6 @@
                 this.ProjectLists = json.ProjectList;
             })
         }
-//    axios.get('https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec').then(response => (this.books = response))
       })
     </script>		
 	</body>
