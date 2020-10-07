@@ -23,7 +23,30 @@
 		<hr>
 		
 		<ul>
-			<p id="target">test</p>
+    <div class="ProjectList" v-for="ProjectList in ProjectList">
+	    {{ ProjectList.Name }}
+    </div>
 		</ul>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          ProjectLists: null
+        },
+        
+        mounted() {
+//          fetch('https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec')
+          fetch('https://script.google.com/macros/s/AKfycbyCQtKgtTJVg5fvr_KJ8PVvj_wevQ6zI2txw59yrqsvpdZXmCk/exec')
+            .then(response => {
+              return response.json();
+            })
+            .then(json => {
+                //多分、右側の.jsonにメソッドを指定する事でjsonの細かな区分けから呼び出すことも可能みたい
+                this.ProjectLists = json.ProjectList;
+            })
+        }
+//    axios.get('https://script.google.com/macros/s/AKfycbzdU4Md20DUSfQFcqJJbUG81LIFGh42WmAQZN_9r3wh3SKSJknB/exec').then(response => (this.books = response))
+      })
+    </script>		
 	</body>
 </html>
