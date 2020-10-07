@@ -13,14 +13,14 @@
 	<body>
 		<h1>index</h1>
 		<hr>
-		    <div id="app">
-		<ul>
-			<div class="ProjectList" v-for="ProjectList in ProjectLists">
-				<li><a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
-			</div>
-		</ul>
-			</div>
-    <script>
+		<div id="app">
+			<ul>
+				<div class="ProjectList" v-for="ProjectList in ProjectLists">
+					<li><a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+				</div>
+			</ul>
+		</div>
+		<script>
       const app = new Vue({
         el: '#app',
         data: {
