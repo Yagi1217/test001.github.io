@@ -27,23 +27,6 @@
 		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPioEu79S_GXuJuwN5zaLiEAXPLDfGPc4GoBsGEiomd1JktPfAwn4RXz1nZnBQWFFkMFm0tLlk4E22/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 		
 		
-		<script>
-      const app = new Vue({
-        el: '#app',
-        data: {
-          ProjectLists: null
-        },
-        
-        mounted() {
-          fetch('https://script.google.com/macros/s/AKfycbyCQtKgtTJVg5fvr_KJ8PVvj_wevQ6zI2txw59yrqsvpdZXmCk/exec')
-            .then(response => {
-              return response.json();
-            })
-            .then(json => {
-                this.ProjectLists = json.ProjectList;
-            })
-        }
-      })
-    </script>		
+    <script type="text/javascript" src="js/Vue.js"></script>
 	</body>
 </html>
