@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-	  <meta charset="UTF-8">
-	  <title>index.html</title>
+	<head>
+		<meta charset="UTF-8">
+		<title>index.html</title>
 		
-    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/vue-simple-suggest"></script>
-    <link rel="stylesheet" href="https://unpkg.com/vue-simple-suggest/dist/styles.css">
-    <link rel="stylesheet" href="css/inlineBlock.css">
+		<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/vue-simple-suggest"></script>
 		<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+
+		<link rel="stylesheet" href="https://unpkg.com/vue-simple-suggest/dist/styles.css">
+		<link rel="stylesheet" href="css/inlineBlock.css">
 	</head>
 	
 	<body>
 		<div class="box" id="makeImg">
 			<div>
-		<h1>index</h1>
-		<hr>
-		<div id="app">
-			<ul>
-				<div class="ProjectList" v-for="ProjectList in ProjectLists">
-					<li><a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+				<h1>index</h1>
+				<hr>
+				<div id="app">
+					<ul>
+						<div class="ProjectList" v-for="ProjectList in ProjectLists">
+							<li><a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+						</div>
+					</ul>
 				</div>
-			</ul>
-		</div>
-		
+			<script type="text/javascript" src="js/Vue.js"></script>
+			</div>
+			
+			<div>
 				<h1>スプレッドシート</h1>
-		<hr>
-		
-		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPioEu79S_GXuJuwN5zaLiEAXPLDfGPc4GoBsGEiomd1JktPfAwn4RXz1nZnBQWFFkMFm0tLlk4E22/pubhtml?gid=2009760063&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-		<script type="text/javascript" src="js/Vue.js"></script>
-		</div>
+				<hr>
+				
+				<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTPioEu79S_GXuJuwN5zaLiEAXPLDfGPc4GoBsGEiomd1JktPfAwn4RXz1nZnBQWFFkMFm0tLlk4E22/pubhtml?gid=2009760063&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+			</div>
 		</div>
 	</body>
 </html>
