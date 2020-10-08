@@ -1,5 +1,4 @@
 <style type="text/css">
- /* --- 外枠の定義 ---------------------------------------------*/
 .box {
 }
 @keyframes boxAnime{
@@ -11,9 +10,9 @@
 
 .box div {
   float: left;
-  list-style: none;
   margin: 30px;
 }
+
 .ProjectList{
  clear: both;
 }
