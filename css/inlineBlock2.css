@@ -1,0 +1,17 @@
+<style type="text/css">
+ /* --- 外枠の定義 ---------------------------------------------*/
+.box {
+}
+@keyframes boxAnime{
+   0% { width : 280px }
+  40% { width : 280px }
+  60% { width : 150px }
+ 100% { width : 150px }
+}
+
+.box div {
+  float: left;
+  list-style: none;
+  margin: 30px;
+}
+</style>
