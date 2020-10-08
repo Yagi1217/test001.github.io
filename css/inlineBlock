@@ -1,0 +1,39 @@
+<style type="text/css">
+ /* --- 外枠の定義 ---------------------------------------------*/
+.box {
+  margin         : auto;                 /* サンプル用 中央寄せ */
+  box-sizing     : border-box;           /* 罫線も含む長さ      */
+  background     : #fff;                 /* BOXの背景色         */
+  border         : 1px solid #666;       /* 枠線の指定          */
+  width          : 280px;                /* BOXの幅             */
+  max-height     : 210px;                /* BOXの高さ           */
+  animation: boxAnime 10s linear infinite alternate;
+
+  /* ▼ inline-block時の定義 */
+  letter-spacing : 0;                    /* 1行の高さを初期化   */
+  line-height    : 1;                    /* 文字間隔を初期化    */
+  text-align     : center;               /* 横位置定義          */
+}
+
+ /* --- サンプル確認用の親枠幅アニメーション ------------------ */
+ /*     (BOXの並びには関係ありません)                           */
+@keyframes boxAnime{
+   0% { width : 280px }
+  40% { width : 280px }
+  60% { width : 150px }
+ 100% { width : 150px }
+}
+
+ /* --- 個別のBOXの定義 --------------------------------------- */
+.box div {
+  box-sizing     : border-box;           /* 罫線も含む長さ      */
+  background     : #B0C4DE;              /* BOXの背景色         */
+  border         : 2px solid #35557f;    /* 枠線の指定          */
+  width          : 60px;                 /* サンプルBOXの幅     */
+  height         : 60px;                 /* サンプルBOXの幅     */
+  margin         : 2px;                  /* サンプルBOXの間     */
+
+  /* ▼ inline-blockの定義 */
+  display        : inline-block;         /* インラインブロック化*/
+}
+</style>
