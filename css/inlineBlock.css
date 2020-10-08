@@ -9,10 +9,9 @@
   max-height     : 210px;                /* BOXの高さ           */
   animation: boxAnime 10s linear infinite alternate;
 
-  /* ▼ inline-block時の定義 */
-  letter-spacing : 0;                    /* 1行の高さを初期化   */
-  line-height    : 1;                    /* 文字間隔を初期化    */
-  text-align     : center;               /* 横位置定義          */
+  /* ▼ FlexBoxの定義 */
+  display        : flex;                 /* FlexBox定義         */
+  flex-wrap      : wrap;                 /* 折り返し定義        */
 }
 
  /* --- サンプル確認用の親枠幅アニメーション ------------------ */
@@ -33,7 +32,7 @@
   height         : 60px;                 /* サンプルBOXの幅     */
   margin         : 2px;                  /* サンプルBOXの間     */
 
-  /* ▼ inline-blockの定義 */
-  display        : inline-block;         /* インラインブロック化*/
+  /* ▼ FlexBoxの各ボックス均等自動幅 */
+  flex-grow      : 1;                    /* 各BOXを均等に割当て */
 }
 </style>
