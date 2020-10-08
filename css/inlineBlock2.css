@@ -16,4 +16,8 @@
   margin: 1rem;
   clear: both;
 }
+
+iframe#parentframe { 
+  width: 100%;
+}
 </style>
