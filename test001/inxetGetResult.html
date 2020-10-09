@@ -18,7 +18,7 @@
         var paramValue = decodeURIComponent(element[1]);
         
         queryObject[paramName] = paramValue;
-        document.getElementById("dat").innerHTML = "<span style='color: red;'>" + paramName + "</span>";
+        document.getElementById("dat").innerHTML = "<span style='color: red;'>" + paramName + paramValue + "</span>";
       }
     }
   }
