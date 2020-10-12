@@ -1,7 +1,10 @@
       const app = new Vue({
         el: '#app',
+        
         data: {
-          ProjectLists: null
+          ProjectLists: null,
+          paramName: null,
+          paramValue: null
         },
         
         mounted() {
@@ -12,5 +15,17 @@
             .then(json => {
                 this.ProjectLists = json.ProjectList;
             })
+          var queryString = window.location.search;
+          if(queryString){
+                queryString = queryString.substring(1);
+                var parameters = queryString.split('&');
+                
+                for (var i = 0; i < parameters.length; i++) {
+                      var element = parameters[i].split('=');
+                      
+                      this.paramName = decodeURIComponent(element[0]);
+                      this.paramValue = decodeURIComponent(element[1]);
+                }
+          } 
         }
       })
