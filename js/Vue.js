@@ -15,11 +15,11 @@
                 }
           } 
         el: '#app',
+          paramName: IntMin,
+          paramValue: IntMax
         
         data: {
           ProjectLists: null,
-          paramName: IntMin,
-          paramValue: IntMax
         },
         
         mounted() {
