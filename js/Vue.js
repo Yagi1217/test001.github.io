@@ -10,16 +10,16 @@
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
                       
-                      paramName = decodeURIComponent(element[0]);
-                      paramValue = decodeURIComponent(element[1]);
+                      paramNames = decodeURIComponent(element[0]);
+                      paramValues = decodeURIComponent(element[1]);
                 }
           } 
         el: '#app',
         
         data: {
           ProjectLists: null,
-          paramName: null,
-          paramValue: null
+          paramName: paramNames,
+          paramValue: paramValues
         },
         
         mounted() {
