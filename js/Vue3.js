@@ -1,25 +1,10 @@
       const app = new Vue({
-          var queryString = window.location.search;
-          var IntMin = '';
-          var IntMax = '';
-            
-          if(queryString){
-                queryString = queryString.substring(1);
-                var parameters = queryString.split('&');
-                
-                for (var i = 0; i < parameters.length; i++) {
-                      var element = parameters[i].split('=');
-                      
-                      IntMin = decodeURIComponent(element[0]);
-                      IntMax = decodeURIComponent(element[1]);
-                }
-          } 
         el: '#app',
         
         data: {
           ProjectLists: null,
-          paramName: IntMin,
-          paramValue: IntMax
+          paramName: null,
+          paramValue: null
         },
         
         mounted() {
@@ -30,5 +15,17 @@
             .then(json => {
                 this.ProjectLists = json.ProjectList;
             })
+          var queryString = window.location.search;
+          if(queryString){
+                queryString = queryString.substring(1);
+                var parameters = queryString.split('&');
+                
+                for (var i = 0; i < parameters.length; i++) {
+                      var element = parameters[i].split('=');
+                      
+                      this.paramName = decodeURIComponent(element[0]);
+                      this.paramValue = decodeURIComponent(element[1]);
+                }
+          } 
         }
       })
