@@ -1,7 +1,7 @@
       const app = new Vue({
           var queryString = window.location.search;
-          var paramName = '';
-          var paramValue = '';
+          var IntMin = '';
+          var IntMax = '';
             
           if(queryString){
                 queryString = queryString.substring(1);
@@ -10,16 +10,16 @@
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
                       
-                      paramNames = decodeURIComponent(element[0]);
-                      paramValues = decodeURIComponent(element[1]);
+                      IntMin = decodeURIComponent(element[0]);
+                      IntMax = decodeURIComponent(element[1]);
                 }
           } 
         el: '#app',
         
         data: {
           ProjectLists: null,
-          paramName: paramNames,
-          paramValue: paramValues
+          paramName: IntMin,
+          paramValue: IntMax
         },
         
         mounted() {
