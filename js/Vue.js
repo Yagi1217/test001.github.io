@@ -1,4 +1,19 @@
       const app = new Vue({
+          var queryString = window.location.search;
+          var paramName = '';
+          var paramValue = '';
+            
+          if(queryString){
+                queryString = queryString.substring(1);
+                var parameters = queryString.split('&');
+                
+                for (var i = 0; i < parameters.length; i++) {
+                      var element = parameters[i].split('=');
+                      
+                      paramName = decodeURIComponent(element[0]);
+                      paramValue = decodeURIComponent(element[1]);
+                }
+          } 
         el: '#app',
         
         data: {
@@ -15,17 +30,5 @@
             .then(json => {
                 this.ProjectLists = json.ProjectList;
             })
-          var queryString = window.location.search;
-          if(queryString){
-                queryString = queryString.substring(1);
-                var parameters = queryString.split('&');
-                
-                for (var i = 0; i < parameters.length; i++) {
-                      var element = parameters[i].split('=');
-                      
-                      this.paramName = decodeURIComponent(element[0]);
-                      this.paramValue = decodeURIComponent(element[1]);
-                }
-          } 
         }
       })
