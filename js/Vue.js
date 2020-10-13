@@ -20,11 +20,11 @@
                       var element = parameters[i].split('=');
                 }
                 for (var i = 0; i < element.length; i++) {
-                      if (decodeURIComponent(element[i]) = 'Min') {
+                      if (decodeURIComponent(element[i]) === 'Min') {
                           Min = decodeURIComponent(element[++i]);
                           this.paramMin = decodeURIComponent(element[++i]);
                           
-                      } else if (decodeURIComponent(element[i]) = 'Max') {
+                      } else if (decodeURIComponent(element[i]) === 'Max') {
                       Max = decodeURIComponent(element[++i]);
                       this.paramMax = decodeURIComponent(element[++i]);
                       }
