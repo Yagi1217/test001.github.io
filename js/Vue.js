@@ -18,13 +18,15 @@
                 var j = 0;
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
-                      if (decodeURIComponent(element[0]) = 'Min') {
-                          Min = decodeURIComponent(element[1]);
-                          this.paramMin = decodeURIComponent(element[1]);
+                }
+                for (var i = 0; i < element.length; i++) {
+                      if (decodeURIComponent(element[i]) = 'Min') {
+                          Min = decodeURIComponent(element[++i]);
+                          this.paramMin = decodeURIComponent(element[++i]);
                           
-                      } else if (decodeURIComponent(element[0]) = 'Max') {
-                      Max = decodeURIComponent(element[1]);
-                      this.paramMax = decodeURIComponent(element[1]);
+                      } else if (decodeURIComponent(element[i]) = 'Max') {
+                      Max = decodeURIComponent(element[++i]);
+                      this.paramMax = decodeURIComponent(element[++i]);
                       }
                 }
           }               
