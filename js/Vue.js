@@ -14,11 +14,13 @@
           if(queryString){
                 queryString = queryString.substring(1);
                 var parameters = queryString.split('&');
-                var elements = ''
+                var elements = '';
+                var j = 0;
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
                       if isFinite(element) {
-                            elements = element;
+                            elements[j] = element;
+                            j++
                       }
                 }
                       Min = decodeURIComponent(elements[0]);
