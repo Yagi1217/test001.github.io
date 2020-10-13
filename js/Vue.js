@@ -17,11 +17,11 @@
                 
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
-                      Min = decodeURIComponent(element[0]);
-                      this.paramMin = decodeURIComponent(element[0]);
+                      Min = decodeURIComponent(element[1]);
+                      this.paramMin = decodeURIComponent(element[1]);
 
-                      Max = decodeURIComponent(element[1]);
-                      this.paramMax = decodeURIComponent(element[1]);
+                      Max = decodeURIComponent(element[3]);
+                      this.paramMax = decodeURIComponent(element[3]);
                 }
           }               
               
