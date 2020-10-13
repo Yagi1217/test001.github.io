@@ -18,7 +18,7 @@
                 var j = 0;
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
-                      if (isFinite(element)) {
+                      if (isFinite(element[i])) {
                             elements[j] = element[i];
                             j++;
                       }
