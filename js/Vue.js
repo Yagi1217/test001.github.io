@@ -20,7 +20,7 @@
                       var element = parameters[i].split('=');
                       if isFinite(element) {
                             elements[j] = element;
-                            j++
+                            j++;
                       }
                 }
                       Min = decodeURIComponent(elements[0]);
