@@ -26,11 +26,19 @@
 
 				<!-- プルダウン作成↓ -->
 				<form method="get" action="./" id="example">
-					<select v-model="selectedNo" name="example">
+					<select v-model="selectedNo" name="Min">
 						<option disabled value="">PL一覧</option>
 						<option v-for="ProjectList in ProjectLists" 
 										v-bind:value="ProjectList.No" 
 										v-bind:key="ProjectList.No">
+							{{ ProjectList.No }}
+						</option>
+					</select>
+					<select v-model="selectedNo" name="Max">
+						<option disabled value="">PL一覧</option>
+						<option v-for="ProjectList in ProjectLists" 
+							v-bind:value="ProjectList.No" 
+							v-bind:key="ProjectList.No">
 							{{ ProjectList.No }}
 						</option>
 					</select>
