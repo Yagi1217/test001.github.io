@@ -20,20 +20,23 @@
 			<div>
 				<h1>index</h1>
 				<hr>
+				<div id="app">
 				<!-- Getの値取得テスト↓ -->
 				<p id="dat"> TEST </p>
-				<h4>以下の内容は右側のスプレッドシートと連動しています。</h4>
-				<div id="app">
+
+				<!-- プルダウン作成↓ -->
+				<form method="get" action="./" id="example">
 					<select v-model="selectedNo">
 						<option disabled value="">PL一覧</option>
 						<option v-for="ProjectList in ProjectLists" 
-							v-bind:value="ProjectList.No" 
-							v-bind:key="ProjectList.No">
+										v-bind:value="ProjectList.No" 
+										v-bind:key="ProjectList.No">
 							{{ ProjectList.No }}
 						</option>
 					</select>
+				</form>
 					
-					
+				<h4>以下の内容は右側のスプレッドシートと連動しています。</h4>
 					<p> {{ paramValue  }} </p>
 					<ul>
 						<div class="ProjectList" v-for="ProjectList in ProjectLists">
