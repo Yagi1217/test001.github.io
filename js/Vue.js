@@ -18,16 +18,12 @@
                 var j = 0;
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
-                      if (isFinite(element[i])) {
-                            elements[j] = element[i];
-                            j++;
-                      }
-                }
-                      Min = decodeURIComponent(elements[0]);
-                      this.paramMin = decodeURIComponent(elements[0]);
+                      Min = decodeURIComponent(element[0]);
+                      this.paramMin = decodeURIComponent(element[0]);
 
-                      Max = decodeURIComponent(elements[1]);
-                      this.paramMax = decodeURIComponent(elements[1]);
+                      Max = decodeURIComponent(element[1]);
+                      this.paramMax = decodeURIComponent(element[1]);
+                }
           }               
               
           fetch('https://script.google.com/macros/s/AKfycbyCQtKgtTJVg5fvr_KJ8PVvj_wevQ6zI2txw59yrqsvpdZXmCk/exec')
