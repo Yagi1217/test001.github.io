@@ -14,15 +14,18 @@
           if(queryString){
                 queryString = queryString.substring(1);
                 var parameters = queryString.split('&');
-                
+                var elements = ''
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
-                      Min = decodeURIComponent(element[1]);
-                      this.paramMin = decodeURIComponent(element[1]);
-
-                      Max = decodeURIComponent(element[3]);
-                      this.paramMax = decodeURIComponent(element[3]);
+                      if isFinite(element) {
+                            elements = element;
+                      }
                 }
+                      Min = decodeURIComponent(elements[1]);
+                      this.paramMin = decodeURIComponent(elements[1]);
+
+                      Max = decodeURIComponent(elements[3]);
+                      this.paramMax = decodeURIComponent(elements[3]);
           }               
               
           fetch('https://script.google.com/macros/s/AKfycbyCQtKgtTJVg5fvr_KJ8PVvj_wevQ6zI2txw59yrqsvpdZXmCk/exec')
