@@ -3,25 +3,25 @@
         
         data: {
           ProjectLists: null,
-          paramName: null,
-          paramValue: null
+          paramMin: null,
+          paramMax: null
         },
         
         mounted() {
           var queryString = window.location.search;
-          var paramNames = '';
-          var paramValues = '';
+          var Min = '';
+          var Max = '';
           if(queryString){
                 queryString = queryString.substring(1);
                 var parameters = queryString.split('&');
                 
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
-                      paramNames = decodeURIComponent(element[0]);
-                      this.paramName = decodeURIComponent(element[0]);
+                      Min;
+                      this.paramMin = decodeURIComponent(element[0]);
 
-                      paramValues = decodeURIComponent(element[1]);
-                      this.paramValue = decodeURIComponent(element[1]);
+                      Max = decodeURIComponent(element[1]);
+                      this.paramMax = Max;
                 }
           }               
               
