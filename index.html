@@ -26,6 +26,7 @@
 
 				<!-- プルダウン作成↓ -->
 				<form method="get" action="./" id="example">
+					Min:
 					<select v-model="selectedNo" name="Min">
 						<option disabled value="">PL一覧</option>
 						<option v-for="ProjectList in ProjectLists" 
@@ -34,6 +35,7 @@
 							{{ ProjectList.No }}
 						</option>
 					</select>
+					|Max:
 					<select v-model="selectedNo" name="Max">
 						<option disabled value="">PL一覧</option>
 						<option v-for="ProjectList in ProjectLists" 
