@@ -15,7 +15,7 @@
                 queryString = queryString.substring(1);
                 var parameters = queryString.split('&');
                 var elements = '';
-                var j = 1;
+                var j = 0;
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
                       if isFinite(element) {
