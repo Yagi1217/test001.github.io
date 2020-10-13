@@ -19,7 +19,7 @@
                 for (var i = 0; i < parameters.length; i++) {
                       var element = parameters[i].split('=');
                       if isFinite(element) {
-                            elements[j] = element;
+                            elements[j] = element[i];
                             j++;
                       }
                 }
