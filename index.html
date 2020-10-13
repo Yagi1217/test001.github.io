@@ -22,7 +22,7 @@
 				<hr>
 				<div id="app">
 				<!-- Getの値取得テスト↓ -->
-				<p id="dat"> TEST </p>
+<!--				<p id="dat"> TEST </p> -->
 
 				<!-- プルダウン作成↓ -->
 				<form method="get" action="./" id="example">
@@ -38,13 +38,14 @@
 				</form>
 					
 				<h4>以下の内容は右側のスプレッドシートと連動しています。</h4>
-					<p> {{ paramValue  }} </p>
 					<ul>
 						<div class="ProjectList" v-for="ProjectList in ProjectLists">
 							<li>{{ ProjectList.No }} <a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
 						</div>
 					</ul>
 				</div>
+				<p> 現在のGETの値:{{ paramValue  }} </p>
+
 			<script type="text/javascript" src="js/Vue.js"></script>
 			</div>
 			
