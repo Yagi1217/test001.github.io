@@ -25,8 +25,8 @@
 				<p id="dat"> TEST </p>
 
 				<!-- プルダウン作成↓ -->
-				<form method="get" action="./" id="example" name="example">
-					<select v-model="selectedNo">
+				<form method="get" action="./" id="example">
+					<select v-model="selectedNo" name="example">
 						<option disabled value="">PL一覧</option>
 						<option v-for="ProjectList in ProjectLists" 
 										v-bind:value="ProjectList.No" 
