@@ -1,5 +1,6 @@
 <style type="text/css">
 .box {
+   margin-right: 1rem;
 }
 @keyframes boxAnime{
    0% { width : 280px }
