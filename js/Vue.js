@@ -21,11 +21,11 @@
                             elements = element;
                       }
                 }
-                      Min = decodeURIComponent(elements[1]);
-                      this.paramMin = decodeURIComponent(elements[1]);
+                      Min = decodeURIComponent(elements[0]);
+                      this.paramMin = decodeURIComponent(elements[0]);
 
-                      Max = decodeURIComponent(elements[3]);
-                      this.paramMax = decodeURIComponent(elements[3]);
+                      Max = decodeURIComponent(elements[1]);
+                      this.paramMax = decodeURIComponent(elements[1]);
           }               
               
           fetch('https://script.google.com/macros/s/AKfycbyCQtKgtTJVg5fvr_KJ8PVvj_wevQ6zI2txw59yrqsvpdZXmCk/exec')
