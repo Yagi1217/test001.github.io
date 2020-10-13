@@ -38,12 +38,16 @@
 				</form>
 					
 				<h4>以下の内容は右側のスプレッドシートと連動しています。</h4>
-					<ul>
-						<div class="ProjectList" v-for="ProjectList in ProjectLists">
-							<li>{{ ProjectList.No }} <a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
-						</div>
-					</ul>
-				<p>現在の値{{ paramValue  }}</p>
+					<div>
+						<ul>
+							<div class="ProjectList" v-for="ProjectList in ProjectLists">
+								<li>{{ ProjectList.No }} <a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+							</div>
+						</ul>
+					</div>
+					<div>
+						<p>現在の値{{ paramValue  }}</p>
+					</div>
 				</div>
 
 			<script type="text/javascript" src="js/Vue.js"></script>
