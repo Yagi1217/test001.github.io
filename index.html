@@ -27,7 +27,7 @@
 					<p> {{ paramValue  }} </p>
 					<ul>
 						<div class="ProjectList" v-for="ProjectList in ProjectLists">
-							<li><a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+							<li>{{ ProjectList.No }} <a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
 						</div>
 					</ul>
 				</div>
