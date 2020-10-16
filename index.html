@@ -51,11 +51,15 @@
 					<div>
 						<ul>
 							<div class="ProjectList" v-for="ProjectList in ProjectLists">
-								<div v-if="paramMin <= ProjectList.No && ProjectList.No <= paramMax">
+								<div v-if="paramMin $$ paramMax">
 									<li>{{ ProjectList.No }} <a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
-								</div>
-								<div v-else>
-									<li></il>
+
+									<div v-if="paramMin <= ProjectList.No && ProjectList.No <= paramMax">
+										<li>{{ ProjectList.No }} <a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+									</div>
+									<div v-else>
+										<li></il>
+								  </div>
 							  </div>
 							</div>
 						</ul>
