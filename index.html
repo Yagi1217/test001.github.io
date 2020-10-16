@@ -51,7 +51,12 @@
 					<div>
 						<ul>
 							<div class="ProjectList" v-for="ProjectList in ProjectLists">
-								<li>{{ ProjectList.No }} <a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+								<div v-if="0 <= ProjectList.No && ProjectList.No <= 3">
+									<li>{{ ProjectList.No }} <a v-bind:href=" ProjectList.Name + '/index.html'">{{ ProjectList.Name }}</a></li>
+								</div>
+								<div v-else>
+									<li></il>
+							  </div>
 							</div>
 						</ul>
 					</div>
