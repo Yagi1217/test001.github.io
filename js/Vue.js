@@ -3,8 +3,8 @@
         
         data: {
           ProjectLists: null,
-          paramMin: null,
-          paramMax: null
+          paramMin: 0,
+          paramMax: 99
         },
         
         mounted() {
