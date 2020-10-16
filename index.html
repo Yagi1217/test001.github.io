@@ -26,10 +26,11 @@
 <!--				<p id="dat"> TEST </p> -->
 
 				<!-- プルダウン作成↓ -->
+				<span>プロジェクト一覧を絞ったりできます↓</span>
 				<form method="get" action="./" id="example">
 					Min:
 					<select v-model="selectedNo" name="Min">
-						<option disabled value="">PL一覧</option>
+						<option disabled value="">PLの番号</option>
 						<option v-for="ProjectList in ProjectLists" 
 										v-bind:value="ProjectList.No" 
 										v-bind:key="ProjectList.No">
@@ -38,7 +39,7 @@
 					</select>
 					|Max:
 					<select v-model="selectedNo" name="Max">
-						<option disabled value="">PL一覧</option>
+						<option disabled value="">PLの番号</option>
 						<option v-for="ProjectList in ProjectLists" 
 							v-bind:value="ProjectList.No" 
 							v-bind:key="ProjectList.No">
