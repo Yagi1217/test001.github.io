@@ -35,8 +35,8 @@ Promise.resolve().then(() => {
       auth
     });
     sheets.spreadsheets.values.append({
-      spreadsheetId: 'スプレッドシートID',
-      range: 'シート名',
+      spreadsheetId: '1vR51cCY3aHBjE8A2BZxB3ddxrwLAH3BrGDctsa2JTc8',
+      range: 'InputTest',
       valueInputOption: 'RAW',
       insertDataOption: 'INSERT_ROWS',
       resource: {
