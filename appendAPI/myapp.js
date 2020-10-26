@@ -1,8 +1,9 @@
-var MYAPP = {
+function appendAPI() {
+      var MYAPP = {
     // スプレッドシートへのアクセスキー
-    SPREADSHEET_KEY: "表示したいスプレッドシートのkey",
+    SPREADSHEET_KEY: "1vR51cCY3aHBjE8A2BZxB3ddxrwLAH3BrGDctsa2JTc8",
     // アクセスしたいシート名
-    TARGET_SHEET_NAME: "表示したいシート",
+    TARGET_SHEET_NAME: "InputTest",
     // スプレッドシートへアクセスするベースURL
     BASE_URL: "http://spreadsheets.google.com/tq?key=",
     // jqGrid表示DOM名
@@ -131,3 +132,4 @@ var MYAPP = {
     }
 
 };
+}
