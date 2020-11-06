@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>テキストボックスを増やしてみる</title>
+<script>
+  var num = 1;
+  function input(){
+    num++;
+    
+    var inputName = "num"+num;
+    var input = document.createElement("input");
+    
+    input.setAttribute("type","text");
+    input.setAttribute("name",inputName);
+    
+    document.getElementById("input").appendChild(input);
+    
+    /* 
+    var limit = 10;
+    if(num > limit){ // 10個以上になったらそれ以上増やさない
+    
+    return false;
+    }
+    */
+  }
+</script>
+
+</head>
+<body>
+  <form>
+    <input type="text" name="num1">
+    <div id="input"></div>
+    <input type="button" value="増加" onClick="input()">
+  </form>
+
+</body>
+</html>
