@@ -8,12 +8,15 @@
     num++;
     
 //    var inputName = "num"+num;
+    var myp = document.createElement("p");
     var input = document.createElement("input");
     
     input.setAttribute("type","text");
     input.setAttribute("name",num);
     
-    document.getElementById("input").appendChild(input);
+    myp.appendChild(input)
+    
+    document.getElementById("input").appendChild(myp);
     
     /* 
     var limit = 10;
