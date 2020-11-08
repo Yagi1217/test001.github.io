@@ -19,8 +19,8 @@
     myp.appendChild(input)
     
     document.getElementById("input").appendChild(myp);
-    var value = $('form[name="1"]').attr('name', 'num');
-    //var name = $('input[type="email"]').attr('name');
+    //var value = $('form[name="1"]').attr('name', 'num');
+    var name = $('input[type="hidden"]').attr('num');
     
     /* 
     var limit = 10;
@@ -35,6 +35,8 @@
 </head>
 <body>
   <form name="1">
+    <input type="hidden" name="1">
+
     <input type="text" name="num1">
     <div id="input"></div>
     <input type="button" value="増加" onClick="input()">
