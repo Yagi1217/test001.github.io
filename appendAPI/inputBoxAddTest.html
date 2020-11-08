@@ -21,7 +21,8 @@
     document.getElementById("input").appendChild(myp);
     $(function(){
       //var value = $('form[name="1"]').attr('name', 'num');
-      var name = $('input[type="hidden"]').attr('name', num);
+      //var name = $('input[type="hidden"]').attr('name', num);
+      var value = $('input[type="hidden"]').attr('value', num);
     });
     /* 
     var limit = 10;
@@ -36,7 +37,7 @@
 </head>
 <body>
   <form name="1">
-    <input type="hidden" name="1">
+    <input type="hidden" name="count" value="1">
 
     <input type="text" name="num1">
     <div id="input"></div>
