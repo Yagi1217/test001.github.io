@@ -2,6 +2,8 @@
 <head>
 <meta charset="utf-8" />
 <title>テキストボックスを増やしてみる</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script>
   var num = 1;
   function input(){
@@ -17,6 +19,7 @@
     myp.appendChild(input)
     
     document.getElementById("input").appendChild(myp);
+    var value = $('input[name="1"]').attr('name', 'num');
     
     /* 
     var limit = 10;
@@ -30,7 +33,7 @@
 
 </head>
 <body>
-  <form>
+  <form name="1">
     <input type="text" name="num1">
     <div id="input"></div>
     <input type="button" value="増加" onClick="input()">
