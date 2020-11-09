@@ -4,35 +4,7 @@
 <title>テキストボックスを増やしてみる</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script>
-  var num = 1;
-  function input(){
-    num++;
-    
-//    var inputName = "num"+num;
-    var myp = document.createElement("p");
-    var input = document.createElement("input");
-    
-    input.setAttribute("type","text");
-    input.setAttribute("name",num);
-    
-    myp.appendChild(input)
-    
-    document.getElementById("input").appendChild(myp);
-    $(function(){
-      //var value = $('form[name="1"]').attr('name', 'num');
-      //var name = $('input[type="hidden"]').attr('name', num);
-      var value = $('input[type="hidden"]').attr('value', num);
-    });
-    /* 
-    var limit = 10;
-    if(num > limit){ // 10個以上になったらそれ以上増やさない
-    
-    return false;
-    }
-    */
-  }
-</script>
+<script type="text/javascript" src="js/createInput.js"></script>
 
 </head>
 <body>
