@@ -1,5 +1,5 @@
   var num = 1;
-  function input(){
+  function createInput(){
     num++;
     
 //    var inputName = "num"+num;
