@@ -4,14 +4,16 @@
     
 //    var inputName = "num"+num;
     var myli = document.createElement("li");
-    var myp = document.createElement("p");
+//    var myp = document.createElement("p");
     var input = document.createElement("input");
     
     input.setAttribute("type","text");
     input.setAttribute("name",num);
-    
+/*    
     myp.appendChild(input)
     myli.appendChild(myp)
+*/    
+    myli.appendChild(input)
     
     document.getElementById("input").appendChild(myli);
     $(function(){
