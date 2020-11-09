@@ -3,7 +3,8 @@
     num++;
     
 //    var inputName = "num"+num;
-    var myp = document.createElement("p");
+    var myli = document.createElement("li");
+    var myp = myli.createElement("p");
     var input = document.createElement("input");
     
     input.setAttribute("type","text");
