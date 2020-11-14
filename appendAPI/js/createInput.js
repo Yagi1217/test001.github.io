@@ -8,7 +8,7 @@
     var input = document.createElement("input");
     
     input.setAttribute("type","text");
-    input.setAttribute("name",num);
+    input.setAttribute("name","input" + num);
 /*    
     myp.appendChild(input)
     myli.appendChild(myp)
