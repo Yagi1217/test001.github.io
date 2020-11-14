@@ -1,5 +1,6 @@
 function doPost(e) { 
 //  var ui = SpreadsheetApp.getUi();
+  
 //ブックID
   var ss = SpreadsheetApp.openById('1TR7hy86hQOUEjuUlV3R5UUvkgBlxosp-PKbJIMgbr8A');
 //シート名
@@ -7,19 +8,17 @@ function doPost(e) {
 //現在の項目数(A列参照)
   var last_row = sheet.getRange("A:A").getValues().filter(String).length;
 
-//(検証中)変数を動的にしてみる
-  var fLine = 'firstLine'
+//パラメータの総数
+  var count = e.parameter.count;
   
   try{
 //書き込み処理
-//    sheet.getRange(last_row + 1,1).setValue('test');
-    sheet.getRange(last_row + 1,1).setValue(e.parameter.firstLine);
-    sheet.getRange(last_row + 1,2).setValue(e.parameter.secondLine);
-
-//(検証中)変数を動的にしてみる
-    sheet.getRange(last_row + 1,3).setValue(eval('e.parameter.' + fLine));
-    sheet.getRange(last_row + 1,4).setValue(e.parameter[1]);
+//    sheet.getRange(last_row + 1, rowInt++).setValue(e.parameter); //postパラメータの中身全て
+    for (let i = 1; i <= count; i++) {
+      sheet.getRange(last_row + 1, i).setValue(eval('e.parameter.input' + i));
+    }
   }
+
   catch(e) {
 //書き込み処理エラー
     return HtmlService.createHtmlOutput('<h2>登録に失敗しました。</h2>');
