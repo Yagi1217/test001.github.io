@@ -1,7 +1,7 @@
 // フォームからカレンダーへ登録を行う
 function addTaskEvents() {
 
-  var myCal = CalendarApp.getCalendarById('7og9vqc38tdcj1la5u5dtbt5kc@group.calendar.google.com'); //カレンダーIDでカレンダーを取得
+  var myCal = CalendarApp.getCalendarById('xxx@group.calendar.google.com'); //カレンダーIDでカレンダーを取得
   var mySheet = SpreadsheetApp.getActiveSheet(); //シートを取得
   var dat = mySheet.getDataRange().getValues(); //シートデータを取得
 
