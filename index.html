@@ -30,6 +30,16 @@
 	
 <!--	<body onload="pramWrite()"> -->
 	<body>
+		<div id="loader-bg">
+			<div id="loader">
+				<!-- <img src="img-loading.gif" width="80" height="80" alt="Now Loading..." /> -->
+				<p>Now Loading...</p>
+			</div>
+		</div>
+		
+		<div id="wrap">
+
+
 		<div id="google_translate_element"></div>
 		<p>
 			<a href="https://translate.google.com/translate?sl=ja&tl=en&u=https://exsample.com">En</a> / 
@@ -67,14 +77,8 @@
 					<input type="submit">
 				</form>
 					
-					<div id="loader-bg">
-						<div id="loader">
-							<!-- <img src="img-loading.gif" width="80" height="80" alt="Now Loading..." /> -->
-							<p>Now Loading...</p>
-						</div>
-					</div>
 					
-					<div id="wrap">
+					<div>
 						<ul>
 							<div class="ProjectList" v-for="ProjectList in ProjectLists">
 								<div v-if="paramMin && paramMax">
@@ -107,6 +111,7 @@
 				
 				<script type="text/javascript" src="js/iframeSizeChange.js"></script>
 			</div>
+		</div>
 		</div>
 	</body>
 </html>
